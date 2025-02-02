@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Import Bookmarks into Firefox",
+  "version": "1.0",
+  "description": "Import bookmarks from Chrome HTML export to Firefox, with deduplication",
+  "permissions": ["bookmarks"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
