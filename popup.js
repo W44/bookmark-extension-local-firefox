@@ -48,6 +48,10 @@ document.getElementById("importBookmarks").addEventListener("click", () => {
                         browser.bookmarks.create({
                             title: link.innerText,
                             url: url
+                        }).then(() => {
+                            console.log("Bookmark added successfully:", link.innerText, url);
+                        }).catch((error) => {
+                            console.error("Error adding bookmark:", error);
                         });
                     } else {
                         console.log("Skipping duplicate bookmark:", link.innerText, url);
